@@ -431,3 +431,302 @@ CREATE TABLE CLIENTE(
 ### Resumo
 
 A correta escolha dos tipos de dados melhora o desempenho do banco de dados, reduz o consumo de armazenamento e aumenta a qualidade das informações armazenadas.
+
+## 8. Comandos DDL
+
+Os comandos DDL (Data Definition Language) são utilizados para criar, alterar e excluir estruturas do banco de dados.
+
+### Principais comandos
+
+- CREATE
+- ALTER
+- DROP
+- TRUNCATE
+
+### Exemplo
+
+```sql
+CREATE TABLE CLIENTE(
+    IDCLIENTE INT PRIMARY KEY,
+    NOME VARCHAR(100)
+);
+```
+
+### Resumo
+
+Os comandos DDL são responsáveis pela definição da estrutura do banco de dados.
+
+## 9. Comandos DML
+
+Os comandos DML (Data Manipulation Language) permitem inserir, atualizar e remover registros das tabelas.
+
+### Principais comandos
+
+- INSERT
+- UPDATE
+- DELETE
+
+### Exemplo
+
+```sql
+INSERT INTO CLIENTE(NOME, SEXO)
+VALUES ('Carlos','M');
+```
+
+### Resumo
+
+Os comandos DML manipulam os dados armazenados nas tabelas.
+
+## 10. Comandos DQL
+
+Os comandos DQL (Data Query Language) são utilizados para consultar informações armazenadas no banco de dados.
+
+### Principal comando
+
+- SELECT
+
+### Exemplo
+
+```sql
+SELECT *
+FROM CLIENTE;
+```
+
+### Resumo
+
+O comando SELECT permite recuperar informações de uma ou mais tabelas.
+
+## 11. Constraints
+
+As Constraints são regras utilizadas para garantir a integridade dos dados armazenados.
+
+### Principais Constraints
+
+- PRIMARY KEY
+- FOREIGN KEY
+- UNIQUE
+- NOT NULL
+- CHECK
+- DEFAULT
+
+### Exemplo
+
+```sql
+NOME VARCHAR(100) NOT NULL
+```
+
+### Resumo
+
+As Constraints ajudam a manter os dados consistentes e evitam registros inválidos.
+
+## 12. Funções de Agregação
+
+As funções de agregação realizam cálculos sobre um conjunto de registros.
+
+### Principais funções
+
+- COUNT()
+- SUM()
+- AVG()
+- MAX()
+- MIN()
+
+### Exemplo
+
+```sql
+SELECT AVG(SALARIO)
+FROM FUNCIONARIOS;
+```
+
+### Resumo
+
+As funções de agregação são utilizadas para gerar estatísticas e relatórios.
+
+## 13. Operadores SQL
+
+Os operadores SQL são utilizados para filtrar e combinar condições durante as consultas.
+
+### Principais operadores
+
+- =
+- >
+- <
+- >=
+- <=
+- <>
+- AND
+- OR
+- NOT
+- LIKE
+- IN
+- BETWEEN
+
+### Exemplo
+
+```sql
+SELECT *
+FROM CLIENTE
+WHERE SEXO = 'F';
+```
+
+### Resumo
+
+Os operadores permitem criar consultas mais específicas e eficientes.
+
+## 14. JOINs
+
+Os JOINs permitem combinar informações de duas ou mais tabelas relacionadas.
+
+### Principais JOINs
+
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- CROSS JOIN
+
+### Exemplo
+
+```sql
+SELECT C.NOME, T.NUMERO
+FROM CLIENTE C
+INNER JOIN TELEFONE T
+ON C.IDCLIENTE = T.ID_CLIENTE;
+```
+
+### Resumo
+
+Os JOINs são utilizados para consultar informações distribuídas em diferentes tabelas.
+
+## 15. Views
+
+Uma View é uma tabela virtual criada a partir de uma consulta SQL.
+
+### Exemplo
+
+```sql
+CREATE VIEW V_CLIENTES AS
+SELECT NOME, SEXO
+FROM CLIENTE;
+```
+
+### Resumo
+
+As Views simplificam consultas e aumentam a reutilização de código SQL.
+
+## 16. Procedures
+
+Uma Procedure é um conjunto de comandos SQL armazenados no banco de dados para executar tarefas específicas.
+
+### Exemplo
+
+```sql
+CREATE PROCEDURE LISTAR_CLIENTES()
+BEGIN
+    SELECT * FROM CLIENTE;
+END;
+```
+
+### Resumo
+
+Procedures automatizam processos e facilitam a reutilização de comandos SQL.
+
+## 17. Triggers
+
+Uma Trigger é executada automaticamente quando ocorre um evento em uma tabela.
+
+### Eventos
+
+- INSERT
+- UPDATE
+- DELETE
+
+### Exemplo
+
+```sql
+CREATE TRIGGER BACKUP_CLIENTE
+AFTER DELETE
+ON CLIENTE
+FOR EACH ROW
+```
+
+### Resumo
+
+Triggers automatizam ações e ajudam no controle e auditoria dos dados.
+
+## 18. Índices
+
+Os índices aceleram a execução de consultas, reduzindo o tempo de busca dos registros.
+
+### Exemplo
+
+```sql
+CREATE INDEX IDX_CLIENTE_NOME
+ON CLIENTE(NOME);
+```
+
+### Resumo
+
+Índices melhoram o desempenho das consultas, principalmente em tabelas com grande volume de dados.
+
+## 19. Backup
+
+O backup consiste na criação de uma cópia de segurança do banco de dados para recuperação em caso de falhas.
+
+### Boas práticas
+
+- Realizar backups periódicos.
+- Testar a restauração.
+- Armazenar cópias em locais seguros.
+
+### Resumo
+
+O backup é essencial para garantir a disponibilidade e a segurança das informações.
+
+## 20. Segurança
+
+A segurança em bancos de dados protege as informações contra acessos não autorizados.
+
+### Boas práticas
+
+- Utilizar senhas fortes.
+- Controlar permissões.
+- Atualizar o MySQL.
+- Utilizar conexões seguras.
+
+### Resumo
+
+Uma boa estratégia de segurança reduz riscos e protege os dados armazenados.
+
+## 21. Boas Práticas
+
+Durante o desenvolvimento de bancos de dados, algumas boas práticas devem ser adotadas:
+
+- Utilizar nomes padronizados.
+- Definir chaves primárias.
+- Evitar redundância.
+- Criar índices quando necessário.
+- Documentar o banco de dados.
+- Realizar backups regularmente.
+
+### Resumo
+
+A adoção de boas práticas facilita a manutenção, melhora o desempenho e aumenta a confiabilidade do banco de dados.
+
+## 22. Glossário
+
+- **SGBD:** Sistema Gerenciador de Banco de Dados.
+- **SQL:** Linguagem para manipulação de bancos de dados.
+- **DDL:** Comandos de definição.
+- **DML:** Comandos de manipulação.
+- **DQL:** Comandos de consulta.
+- **Primary Key:** Chave primária.
+- **Foreign Key:** Chave estrangeira.
+- **View:** Tabela virtual.
+- **Procedure:** Procedimento armazenado.
+- **Trigger:** Gatilho executado automaticamente.
+
+## 23. Conclusão
+
+O MySQL é um dos Sistemas Gerenciadores de Banco de Dados Relacionais mais utilizados no mercado. Seu conjunto de recursos permite desenvolver aplicações seguras, eficientes e escaláveis.
+
+A utilização do NotebookLM contribuiu para organizar os estudos, consolidar conceitos e produzir este miniguia com base em fontes confiáveis, demonstrando a importância da curadoria de conteúdo e da engenharia de prompts no processo de aprendizagem.
