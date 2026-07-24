@@ -256,3 +256,178 @@ Esses relacionamentos são implementados utilizando chaves estrangeiras, garanti
 ### Resumo
 
 O modelo relacional organiza os dados em tabelas relacionadas entre si, permitindo armazenar informações de forma consistente, segura e eficiente. O MySQL utiliza esse modelo como base para o gerenciamento de bancos de dados.
+
+## 5. Instalação do MySQL
+
+O MySQL pode ser instalado em diferentes sistemas operacionais, como Windows, Linux e macOS. A instalação é realizada por meio do instalador oficial disponibilizado pela Oracle, que permite selecionar os componentes desejados durante o processo.
+
+No Windows, a forma mais comum é utilizar o **MySQL Installer**, que possibilita instalar o servidor MySQL, o MySQL Workbench, conectores e outras ferramentas administrativas.
+
+### Principais componentes
+
+Durante a instalação é possível selecionar diversos componentes, entre eles:
+
+- MySQL Server
+- MySQL Workbench
+- MySQL Shell
+- MySQL Router
+- Connectors (Python, Java, .NET, C++, entre outros)
+
+### Etapas básicas da instalação
+
+1. Baixar o MySQL Installer no site oficial.
+2. Executar o instalador.
+3. Selecionar os componentes desejados.
+4. Definir a porta de comunicação (padrão: **3306**).
+5. Configurar a senha do usuário **root**.
+6. Finalizar a instalação.
+7. Testar a conexão utilizando o MySQL Workbench ou o terminal.
+
+### Boas práticas
+
+- Utilizar sempre versões estáveis do MySQL.
+- Definir uma senha forte para o usuário root.
+- Manter o servidor atualizado.
+- Realizar backups periódicos do banco de dados.
+- Restringir o acesso remoto quando não for necessário.
+
+### Resumo
+
+A instalação correta do MySQL é o primeiro passo para construir um ambiente seguro e estável para o desenvolvimento e administração de bancos de dados.
+
+## 6. Estrutura de um Banco de Dados
+
+Um banco de dados relacional é composto por diferentes objetos que trabalham em conjunto para armazenar e organizar as informações.
+
+Os principais elementos são bancos de dados, tabelas, colunas, registros, chaves e relacionamentos.
+
+### Banco de Dados (Database)
+
+É o conjunto organizado de tabelas relacionadas entre si.
+
+Exemplo:
+
+```sql
+CREATE DATABASE oficina;
+```
+
+### Tabelas
+
+As tabelas armazenam informações sobre uma determinada entidade.
+
+Exemplo:
+
+```text
+CLIENTE
+```
+
+```text
+CARRO
+```
+
+```text
+PEDIDO
+```
+
+Cada tabela possui uma finalidade específica dentro do sistema.
+
+### Colunas
+
+As colunas representam os atributos da entidade.
+
+Exemplo da tabela CLIENTE:
+
+| Coluna | Tipo |
+|---------|------|
+| IDCLIENTE | INT |
+| NOME | VARCHAR(100) |
+| SEXO | CHAR(1) |
+
+### Registros
+
+Cada linha da tabela representa um registro.
+
+Exemplo:
+
+| IDCLIENTE | NOME | SEXO |
+|------------|-------|------|
+| 1 | Carlos | M |
+| 2 | Ana | F |
+
+### Relacionamentos
+
+Os relacionamentos conectam diferentes tabelas por meio das chaves estrangeiras.
+
+Exemplo:
+
+- CLIENTE → PEDIDO
+- CLIENTE → ENDERECO
+- CARRO → MARCA
+
+### Resumo
+
+A estrutura organizada dos bancos de dados relacionais facilita o armazenamento, a consulta e a manutenção das informações, garantindo consistência e integridade dos dados.
+
+## 7. Tipos de Dados
+
+Os tipos de dados definem quais valores podem ser armazenados em cada coluna de uma tabela.
+
+A escolha adequada do tipo de dado influencia diretamente o desempenho, o armazenamento e a integridade das informações.
+
+### Tipos Numéricos
+
+| Tipo | Utilização |
+|------|------------|
+| INT | Números inteiros |
+| BIGINT | Números inteiros grandes |
+| DECIMAL | Valores monetários |
+| FLOAT | Valores aproximados |
+| DOUBLE | Alta precisão decimal |
+
+### Tipos de Texto
+
+| Tipo | Utilização |
+|------|------------|
+| CHAR | Texto com tamanho fixo |
+| VARCHAR | Texto com tamanho variável |
+| TEXT | Grandes blocos de texto |
+
+### Tipos de Data
+
+| Tipo | Utilização |
+|------|------------|
+| DATE | Data |
+| TIME | Hora |
+| DATETIME | Data e hora |
+| TIMESTAMP | Registro temporal |
+
+### Outros tipos
+
+| Tipo | Utilização |
+|------|------------|
+| BOOLEAN | Valores verdadeiro ou falso |
+| ENUM | Lista de valores permitidos |
+| JSON | Armazenamento de documentos JSON |
+
+### Exemplo
+
+```sql
+CREATE TABLE CLIENTE(
+    IDCLIENTE INT PRIMARY KEY AUTO_INCREMENT,
+    NOME VARCHAR(100),
+    SEXO ENUM('M','F'),
+    DATA_CADASTRO DATE
+);
+```
+
+### Boas práticas
+
+- Utilizar `VARCHAR` para textos de tamanho variável.
+- Utilizar `CHAR` para campos de tamanho fixo.
+- Utilizar `DECIMAL` para valores financeiros.
+- Utilizar `DATE` para armazenar datas.
+- Escolher sempre o menor tipo de dado que atenda à necessidade da aplicação.
+
+### Resumo
+
+A correta escolha dos tipos de dados melhora o desempenho do banco de dados, reduz o consumo de armazenamento e aumenta a qualidade das informações armazenadas.
