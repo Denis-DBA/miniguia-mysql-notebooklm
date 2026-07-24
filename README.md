@@ -14,6 +14,18 @@ Durante o desenvolvimento do projeto foram utilizados conceitos de curadoria de 
 
 ---
 
+## 📑 Índice
+
+- [📖 Sobre o projeto](#-sobre-o-projeto)
+- [🎯 Objetivos](#-objetivos)
+- [📚 Conteúdo abordado](#-conteúdo-abordado)
+- [🤖 Sobre o NotebookLM](#-sobre-o-notebooklm)
+- [📂 Estrutura do repositório](#-estrutura-do-repositório)
+- [🛠️ Tecnologias utilizadas](#️-tecnologias-utilizadas)
+- [📖 Organização do projeto](#-organização-do-projeto)
+- [🚀 Objetivo de aprendizagem](#-objetivo-de-aprendizagem)
+- [👨‍💻 Autor](#-autor)
+
 ## 🎯 Objetivos
 
 - Estudar os principais conceitos do MySQL.
