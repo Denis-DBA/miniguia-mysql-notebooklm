@@ -53,3 +53,21 @@ INSERT INTO TELEFONE (TIPO, NUMERO, ID_CLIENTE)
 VALUES
 ('CEL', '(11) 99999-1234', 1),
 ('RES', '(11) 3456-7890', 2);
+
+-- =====================================
+-- Tabela: ENDERECO
+-- =====================================
+
+INSERT INTO ENDERECO (RUA, CIDADE, ID_CLIENTE)
+VALUES
+('Rua das Flores, 100', 'São Paulo', 1),
+('Avenida Brasil, 250', 'Campinas', 2);
+
+-- =====================================
+-- Tabela: CARRO_COR
+-- =====================================
+
+INSERT INTO CARRO_COR (ID_CARRO, ID_COR)
+VALUES
+(1, 1),
+(2, 2);
