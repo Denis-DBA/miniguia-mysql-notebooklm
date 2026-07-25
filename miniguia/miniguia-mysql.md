@@ -2,8 +2,8 @@
 
 ## 📑 Índice
 
-- [📖 Introdução ao MySQL](#1-introdução-ao-mysql)
-- [📜 História do MySQL](#2-história-do-mysql)
+1 - [📖 Introdução ao MySQL](#1-introdução-ao-mysql)
+2 - [📜 História do MySQL](#2-história-do-mysql)
 - [🗄️ Sistema Gerenciador de Banco de Dados (SGBD)](#3-sistema-gerenciador-de-banco-de-dados-sgbd)
 - [🗃️ Banco de Dados Relacional](#4-banco-de-dados-relacional)
 - [⚙️ Instalação do MySQL](#5-instalação-do-mysql)
