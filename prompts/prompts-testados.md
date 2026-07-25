@@ -159,8 +159,6 @@ A utilização do NotebookLM demonstrou que a qualidade das respostas depende di
 
 Prompts genéricos produziram respostas mais amplas, enquanto prompts com tópicos definidos, objetivos claros e limitação às fontes selecionadas geraram conteúdos mais organizados e confiáveis.
 
-O processo de criação, análise e refinamento dos prompts contribuiu para o aprendizado sobre MySQL e também para o desenvolvimento de habilidades relacionadas à curadoria de conteúdo, pensamento crítico e engenharia de prompts.
+O processo de criação, análise e refinamento dos prompts contribuiu para o aprendizado sobre MySQL e também para o desenvolvimento de habilidades relacionadas à curadoria de conteúdo, pensamento crítico e engenharia de prompts. 
 
-# Conclusão
-
-A experiência demonstrou que a qualidade das respostas depende diretamente da clareza dos prompts. Quanto mais específico e contextualizado é o pedido, mais útil e organizado é o resultado obtido.
+ A experiência demonstrou que a qualidade das respostas depende diretamente da clareza dos prompts. Quanto mais específico e contextualizado é o pedido, mais útil e organizado é o resultado obtido.
